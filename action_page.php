@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-    입력하신 검색어는 <?php echo $_POST["keyword"] ?> 입니다.    
+<body>  
+    <?php 
+    $keyword = $_POST["keyword"]
+    ?>
+    입력하신 검색어는 <?php echo $keyword ?> 입니다. <br>  
 
     <?php
     $host = "localhost";
@@ -19,11 +21,18 @@
     $conn = new mysqli($host, $user, $pw, $dbName);
     
     /* DB 연결 확인 */
-    if($conn){ echo "Connection established"."<br>"; }
-    else{ die( 'Could not connect: ' . mysqli_error($conn) ); }
+    if($conn){ echo "연결성공"."<br>"; }
+    else{ die( '연결 실패 : ' . mysqli_error($conn) ); }
     
+    $sql = "INSERT INTO `keyword` (`keyword`) VALUES ('$keyword')		
+    ON DUPLICATE KEY UPDATE cnt = cnt + 1";
+    $result = mysqli_query($conn, $sql);
+ 	
+    if($result) { echo "insert success!"; }
+    else { echo "failure"; }
+
     mysqli_close($conn);
-?>
+    ?>
 
 </body>
 </html>
