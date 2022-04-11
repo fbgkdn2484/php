@@ -29,9 +29,9 @@
 <div class="container">
   <h2>검색하기</h2>
   <p>무언가를 입력해보세요.</p>
-  <form class="form-inline" action="/action_page.php">
-    <label for="email2" class="mb-2 mr-sm-2">검색:</label>
-    <input type="text" class="form-control mb-2 mr-sm-2" id="keyword" placeholder="검색어를 입력해주세요." name="email">
+  <form class="form-inline" action="/action_page.php" method="post">
+    <label for="email" class="mb-2 mr-sm-2">검색:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="email" placeholder="검색어를 입력해주세요." name="keyword">
     <!-- <div class="form-check mb-2 mr-sm-2">
       <label class="form-check-label">
         <input type="checkbox" class="form-check-input" name="remember"> Remember me
