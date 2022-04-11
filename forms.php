@@ -20,7 +20,7 @@
       <a class="nav-link" href="/Hello.php">헬로월드</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/forms.php">머하지?</a>
+      <a class="nav-link" href="/forms.php">검색</a>
     </li>
   </ul>
 </nav>
@@ -28,14 +28,15 @@
 
 <div class="container">
   <h2>검색하기</h2>
+  <p>무언가를 입력해보세요.</p>
   <form class="form-inline" action="/action_page.php">
     <label for="email2" class="mb-2 mr-sm-2">검색:</label>
-    <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="검색어를 입력해주세요." name="email">
-    <div class="form-check mb-2 mr-sm-2">
+    <input type="text" class="form-control mb-2 mr-sm-2" id="keyword" placeholder="검색어를 입력해주세요." name="email">
+    <!-- <div class="form-check mb-2 mr-sm-2">
       <label class="form-check-label">
         <input type="checkbox" class="form-check-input" name="remember"> Remember me
       </label>
-    </div>    
+    </div>     -->
     <button type="submit" class="btn btn-primary mb-2">검색</button>
   </form>
 </div>
