@@ -13,10 +13,7 @@
     입력하신 검색어는 <?php echo $keyword ?> 입니다. <br>  
 
     <?php
-    $host = "localhost";
-    $user = "rhw";
-    $pw = "vhzkem62!";
-    $dbName = "rhw";
+    require 'dbconfig.php';
 
     $conn = new mysqli($host, $user, $pw, $dbName);
     
